@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c5/foUjkE086Xs4qscLdK6LHF3ooVXx4/jMlG3k4/xPeaHt0+SQmvixA8uaE4QbeBjxszq023HnEh7EY+mT2Ew==",
+  "dgSpecHash": "PhicLEkOrDTVOzaC5O4auZW4GWajJMIpryIeum84kDd2E+LPP8cOvFcvSz7Un5Q8XJg7riqFiy/1JYhGoSio/Q==",
   "success": true,
   "projectFilePath": "/Users/edrisym/Desktop/Microservice Platform/PlatformService/PlatformService.csproj",
   "expectedPackageFiles": [
@@ -80,9 +80,9 @@
     "/Users/edrisym/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/edrisym/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/edrisym/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
+    "/Users/edrisym/.nuget/packages/microsoft.netcore.app.ref/6.0.26/microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
     "/Users/edrisym/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.26/microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
-    "/Users/edrisym/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.26/microsoft.netcore.app.host.osx-arm64.6.0.26.nupkg.sha512",
-    "/Users/edrisym/.nuget/packages/microsoft.netcore.app.ref/6.0.26/microsoft.netcore.app.ref.6.0.26.nupkg.sha512"
+    "/Users/edrisym/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.26/microsoft.netcore.app.host.osx-arm64.6.0.26.nupkg.sha512"
   ],
   "logs": [
     {

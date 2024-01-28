@@ -3795,7 +3795,6 @@
         "net6.0"
       ],
       "sources": {
-        "/Users/edrisym/Desktop/Project/Microservice/BestPracticeMicroService/Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
