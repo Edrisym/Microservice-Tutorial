@@ -22,10 +22,10 @@ public class PlatformsController : ControllerBase
     public ActionResult<IEnumerable<PlatformReadDto>> GetPlatfroms()
     {
         Console.WriteLine("Getting platforms");
-        
-        var platformItems = _platformRepository.GetAllPlatforms();
-        var MappedItems = _mapper.Map<IEnumerable<PlatformReadDto>>(platformItems);
 
-        return Ok(MappedItems);
+        var platformItems = _platformRepository.GetAllPlatforms();
+        var mappedItems = _mapper.Map<IEnumerable<PlatformReadDto>>(platformItems);
+
+        return Ok(mappedItems);
     }
 }
