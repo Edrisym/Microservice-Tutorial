@@ -1,0 +1,3 @@
+Docker is a contarinerization platform, 
+meaning that it enables you to package your applications into images
+and run them as "Coontainers" on any platform that can run Docker
