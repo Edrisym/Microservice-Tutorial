@@ -1,5 +1,4 @@
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using PlatformReadDtoService.Dtos;
 using PlatformService.Data;
@@ -28,4 +27,18 @@ public class PlatformsController : ControllerBase
 
         return Ok(mappedItems);
     }
+
+    [HttpGet("{platformId}", Name = "GetPlatformById")]
+    public ActionResult<PlatformReadDto> GetPlatformById(int platformId)
+    {
+        var platformItem = _platformRepository.GetPlatformById(platformId);
+        if (platformItem == null)
+        {
+            return NotFound();
+        }
+        var mappedItem = _mapper.Map<PlatformReadDto>(platformItem);
+
+        return Ok(mappedItem);
+    }
+
 }
