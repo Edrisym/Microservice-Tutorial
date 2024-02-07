@@ -1,3 +1,6 @@
 Docker is a contarinerization platform, 
 meaning that it enables you to package your applications into images
 and run them as "Coontainers" on any platform that can run Docker
+
+
+//sha256:768b51a5eae0146bd8959dc27ee4738de4fde6fba2486dd62af1d1996c1003a5

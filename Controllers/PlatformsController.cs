@@ -51,7 +51,7 @@ public class PlatformsController : ControllerBase
 
         var platformReadDto = _mapper.Map<PlatformReadDto>(platformModel);
 
-        // return CreatedAtRoute("GetPlatformById", new { Id = platformReadDto.Id }, platformReadDto);
+        //return CreatedAtRoute(nameof(GetPlatformById), new { Id = platformReadDto.Id }, platformModel);
         return Ok(platformReadDto);
     }
 }
