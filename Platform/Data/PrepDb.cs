@@ -19,8 +19,8 @@ public static class PrepDb
         {
             Console.WriteLine("---> Seeding database...");
             context.Platforms.AddRange(
-           new Platform() { Name = "dotnet", Publisher = "Microsoft", Cost = "Free" },
-           new Platform() { Name = "Edris", Publisher = "Bluh Bluh Bluh", Cost = "Expensive" });
+           new Models.Platform() { Name = "dotnet", Publisher = "Microsoft", Cost = "Free" },
+           new Models.Platform() { Name = "Edris", Publisher = "Bluh Bluh Bluh", Cost = "Expensive" });
 
             context.SaveChanges();
         }
