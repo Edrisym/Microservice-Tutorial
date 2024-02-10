@@ -27,11 +27,13 @@ public class HttpCommandDataClient : ICommandDataClient
 
         if (response.IsSuccessStatusCode)
         {
-            System.Console.WriteLine("---> Sync POST to CommandService was OK!");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("---> Sync POST to CommandService was OK!", Console.ForegroundColor);
         }
         else
         {
-            System.Console.WriteLine("---> Sync POST to CommandService was NOT OK!");
+            Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.WriteLine("---> Sync POST to CommandService was NOT OK!", Console.ForegroundColor);
         }
     }
 }
