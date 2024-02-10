@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-using PlatformService.Models;
-
+﻿
 namespace PlatformService.Data
 {
     public interface IPlatformRepository
     {
         bool SaveChanges();
 
-        IEnumerable<Platform> GetAllPlatforms();
-        Platform GetPlatformById(int id);
-        void CreatePlatform(Platform plat);
+        IEnumerable<Models.Platform> GetAllPlatforms();
+        Models.Platform GetPlatformById(int id);
+        void CreatePlatform(Models.Platform plat);
     }
 }

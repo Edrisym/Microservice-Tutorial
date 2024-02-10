@@ -1,4 +1,5 @@
-﻿using PlatformService.Models;
+﻿
+using PlatformService.Models;
 
 namespace PlatformService.Data
 {
@@ -11,7 +12,7 @@ namespace PlatformService.Data
             _context = context;
         }
 
-        public void CreatePlatform(Platform platfrom)
+        public void CreatePlatform(Models.Platform platfrom)
         {
             if (platfrom == null)
             {
@@ -21,12 +22,12 @@ namespace PlatformService.Data
             _context.Platforms.Add(platfrom);
         }
 
-        public IEnumerable<Platform> GetAllPlatforms()
+        public IEnumerable<PlatformService.Models.Platform> GetAllPlatforms()
         {
             return _context.Platforms.ToList();
         }
 
-        public Platform GetPlatformById(int id)
+        public PlatformService.Models.Platform GetPlatformById(int id)
         {
             return _context.Platforms.FirstOrDefault(p => p.Id == id);
         }
