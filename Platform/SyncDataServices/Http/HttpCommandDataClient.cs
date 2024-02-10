@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 using PlatformReadDtoService.Dtos;
 
 namespace Platform.SyncDataServices.Http;
@@ -7,10 +8,12 @@ namespace Platform.SyncDataServices.Http;
 public class HttpCommandDataClient : ICommandDataClient
 {
     private readonly HttpClient _httpClient;
+    private readonly IConfiguration _configuration;
 
-    public HttpCommandDataClient(HttpClient httpClient,)
+    public HttpCommandDataClient(HttpClient httpClient, IConfiguration configuration)
     {
         _httpClient = httpClient;
+        _configuration = configuration;
     }
 
     public async Task SendPlatfromToCommand(PlatformReadDto platform)
@@ -20,7 +23,7 @@ public class HttpCommandDataClient : ICommandDataClient
                     Encoding.UTF8,
                     "application/Json");
 
-        var response = await _httpClient.PostAsync("http://localhost:5146/api/command/Platforms/", httpContent);
+        var response = await _httpClient.PostAsync($"{_configuration["CommandService"]}", httpContent);
 
         if (response.IsSuccessStatusCode)
         {
