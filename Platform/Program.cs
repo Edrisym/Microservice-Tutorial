@@ -15,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 
+System.Console.WriteLine($"---> CommandService Endpoint {builder.Configuration["CommandService"]}");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
