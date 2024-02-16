@@ -15,5 +15,19 @@ spec:
         app: platform
     spec:
       containers:
-        - name: platform
-          image: edrisym/dockerfile:latest
+      - name: platform
+        image: edrisym/platform:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: platform-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: platform
+  ports:
+  - name: platform
+    protocol: TCP
+    port: 80
+    targetPort: 80
