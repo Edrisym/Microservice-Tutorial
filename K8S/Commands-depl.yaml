@@ -2,32 +2,32 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    environment: platform
-  name: platform-depl
+    environment: commandservice
+  name: commands-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: platform
+      app: commandservice
   template:
     metadata:
       labels:
-        app: platform
+        app: commandservice
     spec:
       containers:
-      - name: platform
-        image: edrisym/platform:latest
+      - name: commandservice
+        image: edrisym/commandservice:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: platform-clusterip-srv
+  name: commands-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: platform
+    app: commandservice
   ports:
-  - name: platform
+  - name: commandservice
     protocol: TCP
     port: 80
     targetPort: 80
