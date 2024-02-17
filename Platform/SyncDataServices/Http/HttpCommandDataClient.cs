@@ -33,7 +33,7 @@ public class HttpCommandDataClient : ICommandDataClient
         else
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            System.Console.WriteLine("---> Sync POST to CommandService was NOT OK!", Console.ForegroundColor);
+            Console.WriteLine("---> Sync POST to CommandService was NOT OK!", Console.ForegroundColor);
         }
     }
 }
