@@ -1,0 +1,9 @@
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/aws/deploy.yaml
+
+
+
+--get
+kubectl get pods --namespace=ingress-nginx -- pod
+kubectl get service ingress-nginx-controller --namespace=ingress-nginx --loadbalancer
+
+--delete
