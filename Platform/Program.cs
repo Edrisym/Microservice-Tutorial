@@ -10,8 +10,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddDbContext<AppDbContext>(option =>
+
+if (builder.Environment.IsProduction())
+{
+    Console.WriteLine("---> Using SqlServer db");
+    builder.Services.AddDbContext<AppDbContext>(option =>
+    option.UseSqlServer(builder.Configuration.GetConnectionString("PlatformConnectionString")));
+}
+else
+{
+    Console.WriteLine("---> Using InMem db");
+    builder.Services.AddDbContext<AppDbContext>(option =>
                                             option.UseInMemoryDatabase("InMem"));
+}
+
 builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 
