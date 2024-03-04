@@ -3,7 +3,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 
 --get
-kubectl get pods --namespace=ingress-nginx -- pod
+kubectl get pods --namespace=ingress-nginx --pod
 kubectl get service ingress-nginx-controller --namespace=ingress-nginx --loadbalancer
 
 --delete
